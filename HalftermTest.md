@@ -298,6 +298,11 @@ ran = sort(ran)
 for i=1:6
   vpasolve(f,x, [ran(i,1) ran(i+1,1)])
 end
+
+right_eq = log(x)/log(1/n)
+left_eq = (1/n)^x
+fplot([left_eq right_eq], [0.2, 0.55])
+
 ```
 Ответ:
 ```matlab
@@ -310,3 +315,5 @@ ans =
 ans =
 0.25000000000000029659902607769791
 ```
+График:
+![](IMG_0263.PNG)
